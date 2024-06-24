@@ -77,7 +77,7 @@ module.exports = {
       let ui = info.messageID;
       api.setMessageReaction("⏳", event.messageID, () => {}, true);
       try {
-        const response = await axios.get(`https://globalapis.onrender.com/api/bing?prompt=${encodeURIComponent(prompt)}`);
+        const response = await axios.get(`https://bing-xxx.onrender.com/api/bing?prompt=${encodeURIComponent(prompt)}`);
         api.setMessageReaction("✅", event.messageID, () => {}, true);
         const images = response.data.images;
         message.unsend(ui);
